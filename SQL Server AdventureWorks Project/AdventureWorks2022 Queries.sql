@@ -1,10 +1,10 @@
  /* 
   1. Generate following
- * 'No Order' for count = 0
- * 'One Time' for count = 1
- * 'Regular' for count range of 2-5
- * 'Often' for count range of 6-10
- * 'Loyal' for count greater than 10
+ 'No Order' for count = 0
+ 'One Time' for count = 1
+ 'Regular' for count range of 2-5
+ 'Often' for count range of 6-10
+ 'Loyal' for count greater than 10
 */
 
  SELECT c.CustomerID, 
@@ -41,13 +41,13 @@ where DATEPART(year, OrderDate) = 2012
 GROUP by c.TerritoryID, c.CustomerID
 
  /* 4 --------------------------------------------------------------------
- * Write a query that returns the salesperson(s) who received the
- * highest bonus amount and calculate the highest bonus amount’s
- * percentage of the total bonus amount for salespeople. Your
- * solution must be able to retrieve all salespersons who received
- * the highest bonus amount if there is a tie.
- * Include the salesperson’s last name and first name, highest
- * bonus amount, percentage in the report. 
+  Write a query that returns the salesperson(s) who received the
+  highest bonus amount and calculate the highest bonus amountâ€™s
+  percentage of the total bonus amount for salespeople. Your
+  solution must be able to retrieve all salespersons who received
+  the highest bonus amount if there is a tie.
+  Include the salespersonâ€™s last name and first name, highest
+  bonus amount, percentage in the report. 
  */
 WITH Temp as (
     select p.LastName, 
@@ -67,9 +67,9 @@ from Temp
 WHERE Rank = 1
 
  /* 5
-  * Provide a unique list of customer id’s which have ordered
-  * both the red and yellow products after May 1, 2013.
-  * Sort the list by customer id. */
+   Provide a unique list of customer idâ€™s which have ordered
+  both the red and yellow products after May 1, 2013.
+   Sort the list by customer id. */
 
 select distinct CustomerID 
 FROM Sales.SalesOrderHeader soh 
@@ -110,12 +110,12 @@ ON t2.ProductID = s.ProductID
 group by t2.Name;
 
 /* 7. Write a query to retrieve the most valuable salesperson of each month
- * in 2013. The most valuable salesperson is the salesperson who has
- * made most sales for AdventureWorks in the month. Use the monthly sum
- * of the TotalDue column of SalesOrderHeader as the monthly total sales
- * for each salesperson. If there is a tie for the most valuable salesperson,
- * your solution should retrieve it. Exclude the orders which didn't have
- * a salesperson specified.
+  in 2013. The most valuable salesperson is the salesperson who has
+ made most sales for AdventureWorks in the month. Use the monthly sum
+ of the TotalDue column of SalesOrderHeader as the monthly total sales
+ for each salesperson. If there is a tie for the most valuable salesperson,
+  your solution should retrieve it. Exclude the orders which didn't have
+ a salesperson specified.
  * */
 
 with Temp as (
@@ -172,9 +172,9 @@ order By Total_Sales_Amt_by_Product Desc
 
 
 /* 9
-  * Provide a unique list of customer id’s which have ordered
-  * both the red and yellow products after May 1, 2014.
-  * Sort the list by customer id. */
+   Provide a unique list of customer idâ€™s which have ordered
+   both the red and yellow products after May 1, 2014.
+   Sort the list by customer id. */
 
   select distinct CustomerID 
 from Sales.SalesOrderHeader soh 
@@ -197,10 +197,10 @@ order by CustomerID
 
 
 /* 10.
- * Using an AdventureWorks database, create a function that accepts
- * a customer id and returns the full name (last name + first name)
- * of the customer.
- * */
+  Using an AdventureWorks database, create a function that accepts
+  a customer id and returns the full name (last name + first name)
+  of the customer.
+  */
 
 DROP Function GetFullName;
 
@@ -271,16 +271,15 @@ FROM
     subquery
 
 	/*
- *  14. Create a function in your own database that takes three
- *	parameters:
- *		1) A year parameter
- *		2) A month parameter
- *		3) A color parameter
- *	The function then calculates and returns the total sales
- *	for products in the requested color during the requested
- *	year and month. If there was no sale for the requested period,
- *
- */
+   14. Create a function in your own database that takes three
+ 	parameters:
+ 		1) A year parameter
+ 		2) A month parameter
+ 		3) A color parameter
+ 	The function then calculates and returns the total sales
+ 	for products in the requested color during the requested
+ 	year and month. If there was no sale for the requested period,
+  */
 
 CREATE FUNCTION ColorSales(
 	@year INT,
