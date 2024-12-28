@@ -304,4 +304,4 @@ BEGIN
 	RETURN @sales
 END
 
-SELECT dbo.ColorSales(2005,8,'Red') AS TotalSales;
+SELECT dbo.ColorSales(2014,8,'Red') AS TotalSales;
