@@ -4,5 +4,5 @@ AdventureWorks Database is a Microsoft product sample for an online transaction 
 
 To view raw code, please check the .sql file above
 
-
+### Relationship Model
 ![image](https://github.com/user-attachments/assets/fdca6ae0-4e55-4a9c-836d-adcccd82fa5f)
