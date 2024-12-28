@@ -1,6 +1,7 @@
 ### Test Task Overview
 
-In this test task, I worked on three main tasks using **Dataform** to process and transform data from Google Analytics 4 (GA4) and Shopify. The tasks involved creating session-level and page-level tables, and enriching Shopify order line data with product collection names. Below is a breakdown of each task:
+In this test task, I worked on three main tasks using **Dataform** to process and transform data from Google Analytics 4 (GA4) and Shopify. The tasks involved creating session-level and page-level tables, and enriching Shopify order line data with product collection names. The Each task is saved in SQL files above
+Below is a breakdown of each task:
 
 #### 1. **Session Level Table - `ga4_stg01_sessions.sqlx`**
    - **Objective**: Created a session-level table that aggregates data from the raw GA4 events.
