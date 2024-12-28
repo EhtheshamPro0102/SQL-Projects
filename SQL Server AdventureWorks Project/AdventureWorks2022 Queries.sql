@@ -291,10 +291,10 @@ AS
 BEGIN
 	DECLARE @sales NUMERIC(38,6);
 		SELECT @sales = ROUND(SUM(sod.UnitPrice * sod.OrderQty), 2)
-		FROM AdventureWorks2008R2.Sales.SalesOrderHeader soh 
-		JOIN AdventureWorks2008R2.Sales.SalesOrderDetail sod 
+		FROM AdventureWorks2022.Sales.SalesOrderHeader soh 
+		JOIN AdventureWorks2022.Sales.SalesOrderDetail sod 
 			ON soh.SalesOrderID = sod.SalesOrderID 
-		JOIN AdventureWorks2008R2.Production.Product p 
+		JOIN AdventureWorks2022.Production.Product p 
 			ON sod.ProductID = p.ProductID 
 		WHERE p.Color = @color AND
 			DATEPART(mm, CAST(OrderDate AS DATE)) = @month AND	
